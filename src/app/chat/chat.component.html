@@ -1,0 +1,18 @@
+<div class="chat-container">
+  <div class="chat-header">Atendimento on-line</div>
+  <div class="chat-body" #chatBody>
+    <div *ngFor="let message of messages"
+         class="message"
+         [ngClass]="{'usuario': message.sender === 'user', 'atendente': message.sender === 'attendant'}">
+      <strong>{{ message.sender === 'user' ? 'Você diz:' : 'Atendente diz:' }}</strong><br>
+      {{ message.text }}
+    </div>
+  </div>
+  <div class="chat-footer">
+    <input type="text"
+           [(ngModel)]="newMessage"
+           (keyup.enter)="sendMessage()"
+           placeholder="Digite sua mensagem...">
+    <button (click)="sendMessage()">ENVIAR</button>
+  </div>
+</div>
