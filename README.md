@@ -1,3 +1,6 @@
+# Recriando o Protótipo de Chat, dessa vez com o framework Angular 
+
+
 # ChatAngular
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.12.
